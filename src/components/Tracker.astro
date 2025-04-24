@@ -1,0 +1,67 @@
+<div id='dot'></div>
+
+<style>
+  #dot {
+    height: 6px;
+    aspect-ratio: 1;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: hsl(var(--background));
+    z-index: 100;
+    pointer-events: none;
+    display: none;
+    mix-blend-mode: difference;
+
+    @media screen and (min-width: 600px) {
+      display: block;
+    }
+  }
+  html.dark #dot {
+    background: hsl(var(--foreground));
+  }
+</style>
+
+<script>
+  function setupTracker() {
+    const dot = document.getElementById('dot');
+
+    function handlePointerMove(event: PointerEvent) {
+      const { clientX, clientY } = event;
+
+      if (dot) {
+        dot.animate(
+          {
+            left: `${clientX}px`,
+            top: `${clientY}px`,
+          },
+          { duration: 3000, fill: 'forwards' }
+        );
+      }
+    }
+
+    document.body.addEventListener('pointermove', handlePointerMove);
+
+    return () => {
+      document.body.removeEventListener('pointermove', handlePointerMove);
+    };
+  }
+
+  // Initialize on page load
+  let cleanup: (() => void) | undefined;
+
+  document.addEventListener('astro:page-load', () => {
+    cleanup?.();
+    cleanup = setupTracker();
+  });
+
+  // Cleanup before page transitions
+  document.addEventListener('astro:before-swap', () => {
+    cleanup?.();
+  });
+
+  // Initial setup
+  cleanup = setupTracker();
+</script>

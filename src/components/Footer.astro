@@ -1,0 +1,26 @@
+---
+import Container from './Container.astro';
+---
+
+<footer>
+  <Container class='py-14 lg:py-16 border-t border-dashed'>
+    <div
+      class='h-full flex justify-between items-center my-auto'
+    >
+      <div class='text-center md:text-left'>
+        <p class='text-foreground text-sm'>
+          © Eduardo Gonzalez {new Date().getFullYear()}.
+        </p>
+      </div>
+      <div class='flex space-x-8'>
+        <a
+          target='_blank'
+          href='https://github.com/edglz'
+          class='text-sm text-foreground hover:underline underline-offset-[3px] decoration-dashed focus-visible:outline-dashed focus-visible:outline-2 focus-visible:outline-emerald-500'
+        >
+          Github
+        </a>
+      </div>
+    </div>
+  </Container>
+</footer>
