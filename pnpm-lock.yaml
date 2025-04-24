@@ -26,6 +26,9 @@ importers:
       astro:
         specifier: ^5.1.9
         version: 5.1.9(@types/node@22.7.4)(jiti@1.21.6)(rollup@4.28.0)(typescript@5.5.4)(yaml@2.5.0)
+      iconsax-astro:
+        specifier: ^0.0.2
+        version: 0.0.2(astro@5.1.9(@types/node@22.7.4)(jiti@1.21.6)(rollup@4.28.0)(typescript@5.5.4)(yaml@2.5.0))
       sharp:
         specifier: ^0.33.5
         version: 0.33.5
@@ -1376,6 +1379,11 @@ packages:
   https-proxy-agent@7.0.6:
     resolution: {integrity: sha512-vK9P5/iUfdl95AI+JVyUuIcVtd4ofvtrOr3HNtM2yxC9bnMbEdp3x01OhQNnjb8IJYi38VlTE3mBXwcfvywuSw==}
     engines: {node: '>= 14'}
+
+  iconsax-astro@0.0.2:
+    resolution: {integrity: sha512-2PjUtisyypPcHGOipthfaBBE/6H387jJ92kgt8i6tNsVm7N8qJoDgAqQIjVueu02KgrVWXoIuvlteKw1TBhLyw==}
+    peerDependencies:
+      astro: '*'
 
   import-meta-resolve@4.1.0:
     resolution: {integrity: sha512-I6fiaX09Xivtk+THaMfAwnA3MVA5Big1WHF1Dfx9hFuvNIWpXnorlkzhcQf6ehrqQiiZECRt1poOAkPmer3ruw==}
@@ -4163,6 +4171,10 @@ snapshots:
       debug: 4.3.7
     transitivePeerDependencies:
       - supports-color
+
+  iconsax-astro@0.0.2(astro@5.1.9(@types/node@22.7.4)(jiti@1.21.6)(rollup@4.28.0)(typescript@5.5.4)(yaml@2.5.0)):
+    dependencies:
+      astro: 5.1.9(@types/node@22.7.4)(jiti@1.21.6)(rollup@4.28.0)(typescript@5.5.4)(yaml@2.5.0)
 
   import-meta-resolve@4.1.0: {}
 

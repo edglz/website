@@ -16,6 +16,7 @@ import Nestjs from '@/components/icons/NestjsIcon.astro';
 import Github from '@/components/icons/Github.astro';
 import { SITE } from '@/lib/constants';
 import Link from '@/components/Link.astro';
+import { Instagram } from 'iconsax-astro';
 
 const projects = await getCollection('projects', ({ data }) => {
   return data.draft !== true;
@@ -253,7 +254,7 @@ const projects = await getCollection('projects', ({ data }) => {
             >
               <a
                 href='mailto:hello@hello@edglz.cloud'
-                class='bg-gradient-to-r from-emerald-700 to-emerald-500 bg-clip-text text-transparent focus-visible:outline-dashed focus-visible:outline-2 focus-visible:outline-emerald-500'
+                class='bg-gradient-to-r from-purple-700 to-purple-500 bg-clip-text text-transparent focus-visible:outline-dashed focus-visible:outline-2 focus-visible:outline-purple-500'
                 >hello@edglz.cloud</a
               >
             </p>
@@ -270,6 +271,16 @@ const projects = await getCollection('projects', ({ data }) => {
                 >
                   <Github />
                   <span class='sr-only'>Github</span>
+                </a>
+              </li>
+              <li class='rounded-md'>
+                <a
+                  href='https://instagram.com/edglzz___'
+                  target='_blank'
+                  class='inline-flex p-1.5 rounded-md z-10 bg-background/80 hover:backdrop-blur-sm border border-transparent hover:border-border'
+                >
+                  <Instagram  type="outline" size={18} color="currentColor" />
+                  <span class='sr-only'>Instagram</span>
                 </a>
               </li>
             </ul>
