@@ -5,11 +5,11 @@
 @layer base {
   :root {
     --foreground: 0 0% 10%;
-    --background: 0 0% 98%;
+    --background: 50 40% 98%;
     --muted-foreground: 0 0% 45%;
     --border: 0 0% 90%;
-    --card: hsl(0, 0%, 99%);
-
+    --card: 50 40% 98%;
+    
     --dot-bg-color: hsl(0, 0%, 98%);
     --dot-color: hsl(0, 0%, 95%);
     --dot-mask-color: hsl(0, 0%, 100%);

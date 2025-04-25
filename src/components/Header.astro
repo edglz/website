@@ -10,7 +10,7 @@ import ThemeToggle from './ThemeToggle.astro';
     >
       <a
         href='/'
-        class='focus-visible:outline-dashed focus-visible:outline-2 focus-visible:outline-emerald-500 z-10 relative font-sans font-semibold'
+        class='focus-visible:outline-dashed focus-visible:outline-2 focus-visible:outline-purple-500 z-10 relative font-sans font-semibold'
         aria-label='logo'
       >
       <svg
@@ -28,6 +28,14 @@ import ThemeToggle from './ThemeToggle.astro';
     </svg>
     
       </a>
+      
+      <!-- Navigation Links -->
+      <div class="hidden md:flex items-center space-x-6">
+        <a href="#projects" class="text-foreground hover:text-purple-500 transition-colors font-mono">Projects</a>
+        <a href="#skills" class="text-foreground hover:text-purple-500 transition-colors font-mono">Stack</a>
+        <a href="#contact" class="text-foreground hover:text-purple-500 transition-colors font-mono">Contact</a>
+      </div>
+      
       <div>
         <ThemeToggle />
       </div>
