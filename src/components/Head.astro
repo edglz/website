@@ -25,7 +25,7 @@ const { title, description, image = "/og-image.png" } = Astro.props;
 <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-<meta name="apple-mobile-web-app-title" content="Taqib" />
+<meta name="apple-mobile-web-app-title" content="edglz" />
 <link rel="manifest" href="/site.webmanifest" />
 
 <!-- Canonical URL -->
@@ -35,6 +35,9 @@ const { title, description, image = "/og-image.png" } = Astro.props;
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
+<meta name="keywords" content="portafolio, desarrollador, web, proyectos, stack, contacto, edglz, frontend, backend, fullstack, javascript, typescript, astro, react" />
+<meta name="author" content="edglz" />
+<meta name="robots" content="index, follow" />
 
 <!-- Open Graph Tags -->
 <meta property="og:type" content="website" />
@@ -49,5 +52,19 @@ const { title, description, image = "/og-image.png" } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "edglz",
+  "url": "https://edglz.cloud/",
+  "sameAs": [
+    "https://github.com/edglz",
+    "https://linkedin.com/in/edglz-dev"
+  ],
+  "jobTitle": "Desarrollador Fullstack",
+  "image": "https://edglz.cloud/og-image.png",
+  "description": {description}
+}</script>
 
 <ClientRouter />

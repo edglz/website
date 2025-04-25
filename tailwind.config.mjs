@@ -22,7 +22,7 @@ export default {
         },
       },
       typography: ({ theme }) => ({
-        taqib: {
+        edglz: {
           css: {
             '--tw-prose-body': 'hsl(var(--muted-foreground))',
             '--tw-prose-headings': 'hsl(var(--foreground))',
